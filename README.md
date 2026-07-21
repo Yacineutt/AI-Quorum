@@ -72,7 +72,7 @@ Token overlap is the default because it is language-agnostic and has no dependen
 
 ## Related
 
-**[AI AgentGuard](https://github.com/Yacineutt/AI-AgentGuard)** — the operational doctrines behind this design. Quorum is doctrine 3 (*honesty over fluency*) made executable.
+**[AI ThreeAM](https://github.com/Yacineutt/AI-ThreeAM)** — the operational doctrines behind this design. Quorum is doctrine 3 (*honesty over fluency*) made executable.
 
 ## License
 
