@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
 <defs>
-  <radialGradient id="amb" cx="0.30" cy="0.46" r="0.76"><stop offset="0" stop-color="#0a2540"/><stop offset="0.44" stop-color="#061020"/><stop offset="1" stop-color="#030409"/></radialGradient>
+  <radialGradient id="amb" cx="0.30" cy="0.48" r="0.78"><stop offset="0" stop-color="#0a2540"/><stop offset="0.44" stop-color="#061020"/><stop offset="1" stop-color="#030409"/></radialGradient>
   <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.55" stop-color="#38BDF8"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient>
   <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#EAF6FF"/><stop offset="1" stop-color="#7DD3FC"/></linearGradient>
   <linearGradient id="nodeGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
@@ -8,10 +8,8 @@
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
   <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#38BDF8" stroke-opacity="0.055" stroke-width="1"/></pattern>
 </defs>
-<rect width="1280" height="640" fill="url(#amb)"/>
-<rect width="1280" height="640" fill="url(#mesh)"/>
-<ellipse cx="320" cy="300" rx="330" ry="290" fill="#22D3EE" opacity="0.11" filter="url(#bL)"/>
-
+<rect width="1280" height="640" fill="url(#amb)"/><rect width="1280" height="640" fill="url(#mesh)"/>
+<ellipse cx="330" cy="320" rx="340" ry="300" fill="#22D3EE" opacity="0.10" filter="url(#bL)"/>
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
     <linearGradient id="wgl" x1="0" y1="0" x2="0" y2="1">
@@ -96,73 +94,80 @@
 </g>
 <text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#7DD3FC" letter-spacing="3">WEVIA</text>
 
-
-<!-- ===== SCHEMA: prompt -> N models -> consensus ===== -->
 <g font-family="DejaVu Sans">
-  <!-- PROMPT -->
-  <g transform="translate(48,290)">
-    <rect x="0" y="-40" width="112" height="80" rx="16" fill="#07202f" stroke="#38BDF8" stroke-width="1.8"/>
-    <rect x="0" y="-40" width="112" height="80" rx="16" fill="url(#nodeGloss)"/>
-    <g transform="translate(56,-12)" stroke="#7DD3FC" stroke-width="2.2" stroke-linecap="round">
-      <path d="M-16,-6 L16,-6"/><path d="M-16,1 L10,1"/><path d="M-16,8 L4,8"/>
+  <g transform="translate(34,304)">
+    <rect x="0" y="-52" width="138" height="104" rx="18" fill="#06202f" stroke="#38BDF8" stroke-width="1.8"/>
+    <rect x="0" y="-52" width="138" height="104" rx="18" fill="url(#nodeGloss)"/>
+    <g transform="translate(69,-14)" stroke="#7DD3FC" stroke-width="2.4" stroke-linecap="round">
+      <path d="M-22,-9 L22,-9"/><path d="M-22,0 L14,0"/><path d="M-22,9 L4,9"/>
     </g>
-    <text x="56" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#E0F2FE">PROMPT</text>
+    <text x="69" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#E0F2FE">PROMPT</text>
+    <text x="69" y="43" text-anchor="middle" font-size="11" fill="#5E86A3">one question</text>
   </g>
+  <path d="M172,304 C202,304 200,176 224,176" stroke="#38BDF8" stroke-width="1.9" opacity="0.6" fill="none"/><path d="M172,304 C202,304 200,240 224,240" stroke="#38BDF8" stroke-width="1.9" opacity="0.6" fill="none"/><path d="M172,304 C202,304 200,304 224,304" stroke="#38BDF8" stroke-width="1.9" opacity="0.6" fill="none"/><path d="M172,304 C202,304 200,368 224,368" stroke="#38BDF8" stroke-width="1.9" opacity="0.6" fill="none"/><path d="M172,304 C202,304 200,448 224,448" stroke="#F59E0B" stroke-width="1.8" opacity="0.45" stroke-dasharray="5 5" fill="none"/>
+  
+    <g transform="translate(228,176)">
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="#0a2438" stroke="#22D3EE" stroke-width="1.4"/>
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="url(#nodeGloss)"/>
+      <circle cx="26" cy="1" r="8" fill="#22D3EE"/>
+      <text x="48" y="6" font-size="13.5" fill="#D3ECFF">model A</text>
+      <text x="156" y="6" text-anchor="end" font-size="12" fill="#5FA8CC">ok</text>
+    </g>
+    <g transform="translate(228,240)">
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="#0a2438" stroke="#22D3EE" stroke-width="1.4"/>
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="url(#nodeGloss)"/>
+      <circle cx="26" cy="1" r="8" fill="#22D3EE"/>
+      <text x="48" y="6" font-size="13.5" fill="#D3ECFF">model B</text>
+      <text x="156" y="6" text-anchor="end" font-size="12" fill="#5FA8CC">ok</text>
+    </g>
+    <g transform="translate(228,304)">
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="#0a2438" stroke="#22D3EE" stroke-width="1.4"/>
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="url(#nodeGloss)"/>
+      <circle cx="26" cy="1" r="8" fill="#22D3EE"/>
+      <text x="48" y="6" font-size="13.5" fill="#D3ECFF">model C</text>
+      <text x="156" y="6" text-anchor="end" font-size="12" fill="#5FA8CC">ok</text>
+    </g>
+    <g transform="translate(228,368)">
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="#0a2438" stroke="#22D3EE" stroke-width="1.4"/>
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="url(#nodeGloss)"/>
+      <circle cx="26" cy="1" r="8" fill="#22D3EE"/>
+      <text x="48" y="6" font-size="13.5" fill="#D3ECFF">model D</text>
+      <text x="156" y="6" text-anchor="end" font-size="12" fill="#5FA8CC">ok</text>
+    </g>
+    <g transform="translate(228,448)">
+      <rect x="0" y="-20" width="176" height="42" rx="13" fill="#221805" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="5 4"/>
+      <circle cx="26" cy="1" r="8" fill="none" stroke="#FCD34D" stroke-width="2"/>
+      <text x="48" y="6" font-size="13.5" fill="#FDE68A">model E</text>
+      <text x="156" y="6" text-anchor="end" font-size="12" fill="#C08A2E">429</text>
+    </g>
+  <path d="M404,176 C446,176 452,304 484,304" stroke="#38BDF8" stroke-width="1.9" opacity="0.55" fill="none"/><path d="M404,240 C446,240 452,304 484,304" stroke="#38BDF8" stroke-width="1.9" opacity="0.55" fill="none"/><path d="M404,304 C446,304 452,304 484,304" stroke="#38BDF8" stroke-width="1.9" opacity="0.55" fill="none"/><path d="M404,368 C446,368 452,304 484,304" stroke="#38BDF8" stroke-width="1.9" opacity="0.55" fill="none"/>
+  <path d="M404,448 C432,448 438,430 448,414" stroke="#F59E0B" stroke-width="1.8" opacity="0.35" stroke-dasharray="5 5" fill="none"/>
+  <text x="470" y="440" font-size="11.5" fill="#B0862F">excluded</text>
 
-  <!-- fan-out lines -->
-  <g fill="none" stroke-width="1.8">
-    <path d="M160,290 C196,290 200,178 236,178" stroke="#38BDF8" opacity="0.65"/>
-    <path d="M160,290 C196,290 200,234 236,234" stroke="#38BDF8" opacity="0.65"/>
-    <path d="M160,290 L236,290" stroke="#38BDF8" opacity="0.65"/>
-    <path d="M160,290 C196,290 200,346 236,346" stroke="#38BDF8" opacity="0.65"/>
-    <path d="M160,290 C196,290 200,402 236,402" stroke="#F59E0B" opacity="0.5" stroke-dasharray="4 5"/>
-  </g>
-
-  <!-- model nodes -->
-  <g>
-    <g transform="translate(236,178)"><rect x="0" y="-17" width="128" height="34" rx="11" fill="#0a2236" stroke="#22D3EE" stroke-width="1.4"/><circle cx="18" cy="0" r="6" fill="#22D3EE"/><text x="34" y="4.6" font-size="12" fill="#CFE9FF">model A</text><text x="112" y="4.6" text-anchor="end" font-size="10.5" fill="#5FA8CC">ok</text></g>
-    <g transform="translate(236,234)"><rect x="0" y="-17" width="128" height="34" rx="11" fill="#0a2236" stroke="#22D3EE" stroke-width="1.4"/><circle cx="18" cy="0" r="6" fill="#22D3EE"/><text x="34" y="4.6" font-size="12" fill="#CFE9FF">model B</text><text x="112" y="4.6" text-anchor="end" font-size="10.5" fill="#5FA8CC">ok</text></g>
-    <g transform="translate(236,290)"><rect x="0" y="-17" width="128" height="34" rx="11" fill="#0a2236" stroke="#22D3EE" stroke-width="1.4"/><circle cx="18" cy="0" r="6" fill="#22D3EE"/><text x="34" y="4.6" font-size="12" fill="#CFE9FF">model C</text><text x="112" y="4.6" text-anchor="end" font-size="10.5" fill="#5FA8CC">ok</text></g>
-    <g transform="translate(236,346)"><rect x="0" y="-17" width="128" height="34" rx="11" fill="#0a2236" stroke="#22D3EE" stroke-width="1.4"/><circle cx="18" cy="0" r="6" fill="#22D3EE"/><text x="34" y="4.6" font-size="12" fill="#CFE9FF">model D</text><text x="112" y="4.6" text-anchor="end" font-size="10.5" fill="#5FA8CC">ok</text></g>
-    <g transform="translate(236,402)"><rect x="0" y="-17" width="128" height="34" rx="11" fill="#211705" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="4 4"/><circle cx="18" cy="0" r="6" fill="none" stroke="#FCD34D" stroke-width="1.8"/><text x="34" y="4.6" font-size="12" fill="#FDE68A">model E</text><text x="112" y="4.6" text-anchor="end" font-size="10.5" fill="#C08A2E">429</text></g>
-  </g>
-
-  <!-- fan-in -->
-  <g fill="none" stroke-width="1.8">
-    <path d="M364,178 C404,178 410,262 448,270" stroke="#38BDF8" opacity="0.6"/>
-    <path d="M364,234 C404,234 412,266 448,276" stroke="#38BDF8" opacity="0.6"/>
-    <path d="M364,290 L448,288" stroke="#38BDF8" opacity="0.6"/>
-    <path d="M364,346 C404,346 412,312 448,300" stroke="#38BDF8" opacity="0.6"/>
-    <path d="M364,402 C392,402 400,392 408,384" stroke="#F59E0B" opacity="0.35" stroke-dasharray="4 5"/>
-    <text x="416" y="400" font-size="10" fill="#B0862F">excluded</text>
-  </g>
-
-  <!-- CONSENSUS -->
-  <g transform="translate(448,286)">
-    <circle r="58" fill="#061a2b" stroke="url(#neon)" stroke-width="2.4"/>
-    <circle r="58" fill="none" stroke="#34D399" stroke-width="1.4" opacity="0.4" stroke-dasharray="3 7"/>
-    <text x="0" y="-6" text-anchor="middle" font-size="26" font-weight="bold" fill="#F0FBFF" font-family="DejaVu Sans">0.87</text>
-    <text x="0" y="14" text-anchor="middle" font-size="9.5" fill="#6FA8C6" letter-spacing="1.6">AGREEMENT</text>
-    <text x="0" y="30" text-anchor="middle" font-size="10" fill="#5FCFA4">4 of 5 counted</text>
+  <g transform="translate(556,304)">
+    <circle r="72" fill="#04192a" stroke="url(#neon)" stroke-width="2.6"/>
+    <circle r="72" fill="none" stroke="#34D399" stroke-width="1.5" opacity="0.42" stroke-dasharray="3 8"/>
+    <text x="0" y="-6" text-anchor="middle" font-size="34" font-weight="bold" fill="#F0FBFF">0.87</text>
+    <text x="0" y="17" text-anchor="middle" font-size="10.5" fill="#6FA8C6" letter-spacing="1.8">AGREEMENT</text>
+    <text x="0" y="38" text-anchor="middle" font-size="11.5" fill="#5FCFA4">4 of 5 counted</text>
   </g>
 </g>
-
-<g transform="translate(700,168)">
+<g transform="translate(720,192)">
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
   <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
   <text x="37" y="0" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="22" fill="#7DD3FC" letter-spacing="3">AI</text>
   <rect x="88" y="-11" width="46" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
 </g>
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="698" y="278" font-size="88" fill="#22D3EE" opacity="0.5" filter="url(#bL)">Quorum</text>
-  <text x="698" y="278" font-size="88" fill="url(#txtg)">Quorum</text>
+  <text x="718" y="300" font-size="86" fill="#22D3EE" opacity="0.5" filter="url(#bL)">Quorum</text>
+  <text x="718" y="300" font-size="86" fill="url(#txtg)">Quorum</text>
 </g>
-<rect x="700" y="306" width="128" height="5" rx="2.5" fill="url(#neon)"/>
+<rect x="720" y="328" width="128" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="700" y="360" font-size="25" fill="#CFE9FF">One prompt. Every model.</text>
-  <text x="700" y="394" font-size="25" fill="#CFE9FF">Real agreement, measured.</text>
-  <text x="700" y="446" font-size="17" fill="#7E9CC0">Ask them all &#183; score the consensus &#183; zero deps</text>
+  <text x="720" y="382" font-size="25" fill="#CFE9FF">One prompt. Every model.</text>
+  <text x="720" y="416" font-size="25" fill="#CFE9FF">Real agreement, measured.</text>
+  <text x="720" y="466" font-size="17" fill="#7E9CC0">Ask them all &#183; score the consensus &#183; zero deps</text>
 </g>
-<g font-family="DejaVu Sans"><rect x="700" y="486" width="3" height="19" rx="1.5" fill="#22D3EE"/><text x="716" y="501" font-size="15" fill="#7E9CC0">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+<g font-family="DejaVu Sans"><rect x="720" y="500" width="3" height="19" rx="1.5" fill="#22D3EE"/><text x="736" y="515" font-size="15" fill="#7E9CC0">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
 <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#22D3EE" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
