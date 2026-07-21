@@ -1,67 +1,79 @@
-<p align="center"><img src="cover.svg" alt="consensus-lens" width="100%"></p>
+<p align="center"><img src="cover.svg" alt="Quorum" width="100%"></p>
 
-# llm-consensus-lens
-
-**Fan out one prompt across many language models. See where they agree, where they don't, and how far apart they really are.**
-
-Created by **Yacine Mahboub**, Founder of WEVIA.
+<h1 align="center">Quorum</h1>
+<p align="center"><b>One prompt. Every model. Real agreement, measured.</b></p>
+<p align="center">Ask them all &nbsp;·&nbsp; score the consensus &nbsp;·&nbsp; zero dependencies</p>
 
 ---
 
-## The idea
+## Why
 
-A single model gives you one answer with false confidence. Several models give you a *distribution* — and the shape of that distribution is information.
+One model gives you an answer with false confidence. Several models give you a **distribution** — and the shape of that distribution is the information you actually needed.
 
-`llm-consensus-lens` sends the same prompt to every provider you configure, in parallel, then measures how much the answers actually overlap. High agreement is a signal you can trust the result. Low agreement is a signal to look closer — and it's exactly the case a single model would have hidden from you.
+Quorum sends the same prompt to every model you configure, in parallel, then measures how much their answers genuinely overlap. High agreement means you can trust it. Low agreement means the question is contested — exactly the case a single model would have hidden from you.
 
-This is the evaluation skeleton, not a product. It ships with **no providers wired in** and **no business logic**. You bring the models; it brings the discipline.
+Created by **Yacine Mahboub**, Founder of WEVIA.
 
-## What it does
-
-- **Fan-out**: one prompt → N providers, concurrently, with per-provider timeouts.
-- **Graceful degradation**: a provider that rate-limits, errors, or times out is recorded as such and excluded from the vote — never faked, never silently dropped.
-- **Consensus scoring**: pairwise token-overlap (Jaccard) across the answers, aggregated into a single agreement score.
-- **Honest reporting**: every answer is tagged with its latency, status, and whether it counted toward consensus.
-
-## What it deliberately does *not* do
-
-- It does not pick a "winner". Consensus is a measurement, not a verdict.
-- It does not retry silently or paper over failures. A 429 is reported as a 429.
-- It does not ship provider credentials, endpoints, or routing logic. That is yours.
-
-## Quick look
+## 30 seconds
 
 ```python
 from consensus_lens import Lens, Provider
 
-lens = Lens(providers=[
-    Provider("model-a", call=call_model_a),
-    Provider("model-b", call=call_model_b),
-    Provider("model-c", call=call_model_c),
+lens = Lens([
+    Provider("model-a", call=ask_model_a),
+    Provider("model-b", call=ask_model_b),
+    Provider("model-c", call=ask_model_c),
 ])
 
-result = lens.ask("Summarize the risks of this migration plan.")
+r = lens.ask("Assess the risk of this migration plan.")
 
-print(result.consensus)        # 0.0 - 1.0
-print(result.level)            # "strong" | "partial" | "divergent"
-for v in result.votes:
-    print(v.name, v.status, v.latency_ms)
+print(r.consensus)   # 0.87
+print(r.level)       # "strong"
 ```
 
-## Why the consensus number matters
+```
+consensus=0.87  level=strong  counted=3/3
+  model-a    412ms  counted
+  model-b    690ms  counted
+  model-c    533ms  counted
+```
 
-A high score means the models converged independently — the kind of corroboration you cannot get from one model no matter how large. A low score is not a failure of the tool; it is the tool doing its job, telling you the question is genuinely contested and deserves a human.
+A provider that rate-limits, times out, or returns nothing is recorded as such and **excluded from the vote** — never retried silently, never faked to keep the numbers pretty.
 
-The most dangerous answer in production is a confident one that happens to be wrong. This measures the confidence you can actually justify.
+## What you get
 
-## Design principles
+- **Parallel fan-out** with per-provider timeouts. One slow model never blocks the rest.
+- **Honest degradation.** A 429 is reported as a 429. Failures never enter the score.
+- **Consensus scoring.** Pairwise token overlap across answers, aggregated into one number.
+- **A verdict you can act on** — `strong` / `partial` / `divergent` / `insufficient`.
 
-The scoring engine follows a small set of operational doctrines — the same ones we apply to agents that touch production. See [github.com/Yacineutt/agent-ops-doctrines](https://github.com/Yacineutt/agent-ops-doctrines). The relevant one here is *honesty over fluency*: an absent answer is absent, never invented to keep the vote tidy.
+## What it deliberately doesn't do
+
+- It never picks a winner. Consensus is a measurement, not a verdict.
+- It ships **no providers, no credentials, no endpoints**. You wire your own — see [`providers/`](providers/).
+- No dependencies. Standard library only.
+
+## Try it now
+
+```bash
+git clone https://github.com/Yacineutt/Quorum && cd Quorum
+python3 examples/mock_providers.py
+```
+
+Runs offline with mock models. Shows both cases that matter: models agreeing, and one provider failing while the vote continues honestly.
+
+## Swap the scorer
+
+Token overlap is the default because it is language-agnostic and has no dependencies. Replace `_tokens()` in [`src/consensus_lens.py`](src/consensus_lens.py) with embeddings or a semantic scorer — the interface stays identical.
+
+## Related
+
+**[AgentGuard](https://github.com/Yacineutt/AgentGuard)** — the operational doctrines behind this design. Quorum is doctrine 3 (*honesty over fluency*) made executable.
 
 ## License
 
-Apache-2.0 — see [LICENSE](LICENSE).
+Apache-2.0.
 
 ---
 
-*Maintained by [WEVIA](https://weval-consulting.com) — sovereign AI platform engineering.*
+<p align="center"><sub>Maintained by <a href="https://weval-consulting.com">WEVIA</a> — sovereign AI platform engineering.</sub></p>
