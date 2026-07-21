@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" width="300" height="340">
+<defs>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#22A5E0"/></linearGradient>
+  <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#08243c"/><stop offset="1" stop-color="#051726"/></linearGradient>
+  <radialGradient id="cheek" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7DD3FC" stop-opacity="0.9"/><stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="dropg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+
+<ellipse cx="150" cy="316" rx="86" ry="16" fill="#000" opacity="0.35"/>
+
+<!-- 5 little voter orbs floating around, converging (Quorum identity) -->
+<g>
+  <g transform="translate(48,90)"><circle r="15" fill="#7C5CFF" filter="url(#dropg)"/><circle r="15" fill="#0d0a24"/><circle cx="2" cy="-1" r="5" fill="#C4B5FD"/><path d="M-6,4 L-1,8 L7,-3" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(252,90)"><circle r="15" fill="#22D3EE" filter="url(#dropg)"/><circle r="15" fill="#071a2b"/><circle cx="2" cy="-1" r="5" fill="#A5F3FC"/><path d="M-6,4 L-1,8 L7,-3" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(36,190)"><circle r="13" fill="#34D399" filter="url(#dropg)"/><circle r="13" fill="#052319"/><circle cx="2" cy="-1" r="4" fill="#A7F3D0"/><path d="M-5,3 L-1,7 L6,-3" fill="none" stroke="#ECFDF5" stroke-width="2.2" stroke-linecap="round"/></g>
+  <g transform="translate(264,190)"><circle r="13" fill="#7C5CFF" filter="url(#dropg)"/><circle r="13" fill="#0d0a24"/><circle cx="2" cy="-1" r="4" fill="#C4B5FD"/><path d="M-5,3 L-1,7 L6,-3" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round"/></g>
+  <!-- dissenter: amber, dashed, small question -->
+  <g transform="translate(255,265)"><circle r="11" fill="#F59E0B" opacity="0.35" filter="url(#dropg)"/><circle r="11" fill="#1a1206" stroke="#FCD34D" stroke-width="1.5" stroke-dasharray="3 3"/><text x="0" y="4" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="13" fill="#FDE68A">?</text></g>
+</g>
+<!-- convergence beams from orbs to core -->
+<g stroke-linecap="round" opacity="0.5">
+  <line x1="60" y1="98" x2="110" y2="150" stroke="#7C5CFF" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="240" y1="98" x2="190" y2="150" stroke="#22D3EE" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="48" y1="192" x2="105" y2="185" stroke="#34D399" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="252" y1="192" x2="195" y2="185" stroke="#7C5CFF" stroke-width="2" stroke-dasharray="3 5"/>
+</g>
+
+<!-- BODY: rounded orb, the "core" that tallies -->
+<circle cx="150" cy="178" r="80" fill="url(#body)"/>
+<circle cx="150" cy="178" r="80" fill="none" stroke="#7DD3FC" stroke-width="2" opacity="0.5"/>
+
+<!-- belly tally screen with brain lobes -->
+<rect x="106" y="186" width="88" height="60" rx="22" fill="url(#belly)" stroke="#0e3b5c" stroke-width="2"/>
+<path d="M150,200 C147,197 141,196 137,199 C133,202 132,206 133,210 C130,212 130,216 132,219 C135,222 140,222 142,219 C144,222 147,224 150,224" fill="none" stroke="#A78BFA" stroke-width="2.6" stroke-linecap="round" filter="url(#soft)"/>
+<path d="M150,200 C153,197 159,196 163,199 C167,202 168,206 167,210 C170,212 170,216 168,219 C165,222 160,222 158,219 C156,222 153,224 150,224" fill="none" stroke="#67E8F9" stroke-width="2.6" stroke-linecap="round" filter="url(#soft)"/>
+<text x="150" y="242" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="11" fill="#7DD3FC">0.87</text>
+
+<!-- FACE -->
+<g>
+  <ellipse cx="124" cy="150" rx="20" ry="22" fill="#04121e"/>
+  <ellipse cx="176" cy="150" rx="20" ry="22" fill="#04121e"/>
+  <circle cx="130" cy="144" r="7" fill="#A5F3FC"/><circle cx="132" cy="141" r="2.6" fill="#fff"/>
+  <circle cx="182" cy="144" r="7" fill="#A5F3FC"/><circle cx="184" cy="141" r="2.6" fill="#fff"/>
+</g>
+<circle cx="102" cy="170" r="13" fill="url(#cheek)"/>
+<circle cx="198" cy="170" r="13" fill="url(#cheek)"/>
+<path d="M140,170 Q150,180 160,170" fill="none" stroke="#04121e" stroke-width="3.5" stroke-linecap="round"/>
+
+<!-- little antenna showing "listening to all" -->
+<line x1="150" y1="98" x2="150" y2="76" stroke="#22D3EE" stroke-width="4" stroke-linecap="round"/>
+<circle cx="150" cy="70" r="8" fill="#34D399" filter="url(#dropg)"/>
+<circle cx="150" cy="70" r="3.5" fill="#ECFDF5"/>
+</svg>

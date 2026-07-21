@@ -4,6 +4,10 @@
 <p align="center"><b>One prompt. Every model. Real agreement, measured.</b></p>
 <p align="center">Ask them all &nbsp;·&nbsp; score the consensus &nbsp;·&nbsp; zero dependencies</p>
 
+
+<p align="center"><img src="mascot-pip.svg" alt="Pip mascot" width="150"></p>
+<p align="center"><i>Meet <b>Pip</b> — the little tallier that listens to every model and reports what they really agree on.</i></p>
+
 ---
 
 ## Why
