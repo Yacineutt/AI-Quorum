@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" font-family="'Segoe UI',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0e1f"/><stop offset="0.55" stop-color="#0d1330"/><stop offset="1" stop-color="#141c3c"/></linearGradient>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#1FB6FF"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#1FB6FF" stop-opacity="0.28"/><stop offset="1" stop-color="#1FB6FF" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/></pattern>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <ellipse cx="465" cy="320" rx="330" ry="250" fill="url(#glow)"/>
+
+  <!-- convergence lens: many nodes -> agreement core -->
+  <g transform="translate(465,320)">
+    <circle r="170" fill="none" stroke="#7C5CFF" stroke-opacity="0.22" stroke-width="1"/>
+    <circle r="120" fill="none" stroke="#1FB6FF" stroke-opacity="0.18" stroke-width="1"/>
+    <!-- 5 model nodes around -->
+    <g>
+      <line x1="0" y1="0" x2="-150" y2="-70" stroke="#1FB6FF" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <line x1="0" y1="0" x2="155" y2="-58" stroke="#1FB6FF" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <line x1="0" y1="0" x2="-135" y2="95" stroke="#7C5CFF" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <line x1="0" y1="0" x2="150" y2="100" stroke="#37E0A6" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <line x1="0" y1="0" x2="0" y2="-165" stroke="#1FB6FF" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 7"/>
+    </g>
+    <g>
+      <circle cx="-150" cy="-70" r="15" fill="#0d1330" stroke="#1FB6FF" stroke-width="2"/>
+      <circle cx="155" cy="-58" r="15" fill="#0d1330" stroke="#1FB6FF" stroke-width="2"/>
+      <circle cx="-135" cy="95" r="15" fill="#0d1330" stroke="#7C5CFF" stroke-width="2"/>
+      <circle cx="150" cy="100" r="15" fill="#0d1330" stroke="#37E0A6" stroke-width="2"/>
+      <circle cx="0" cy="-165" r="15" fill="#0d1330" stroke="#1FB6FF" stroke-width="2"/>
+    </g>
+    <!-- consensus core -->
+    <circle r="46" fill="#7C5CFF" fill-opacity="0.14" stroke="url(#gw)" stroke-width="2.5" filter="url(#soft)"/>
+    <circle r="46" fill="none" stroke="url(#gw)" stroke-width="2.5"/>
+    <text x="0" y="6" text-anchor="middle" fill="#EAF0FF" font-size="20" font-weight="700" font-family="'IBM Plex Mono',monospace">0.87</text>
+    <circle r="64" fill="none" stroke="#37E0A6" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3 6"/>
+  </g>
+
+  <!-- text -->
+  <text x="770" y="262" fill="#EAF0FF" font-size="56" font-weight="800" letter-spacing="-1">consensus</text>
+  <text x="770" y="326" fill="#EAF0FF" font-size="56" font-weight="800" letter-spacing="-1">lens</text>
+  <rect x="772" y="356" width="120" height="4" rx="2" fill="url(#gw)"/>
+  <text x="772" y="398" fill="#9FB0D8" font-size="21" font-weight="400">One prompt, many models,</text>
+  <text x="772" y="426" fill="#9FB0D8" font-size="21" font-weight="400">measured agreement.</text>
+  <text x="772" y="486" fill="#5D6B92" font-size="17" font-family="'IBM Plex Mono',monospace">by Yacine Mahboub · Founder of WEVIA</text>
+</svg>

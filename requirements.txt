@@ -1,0 +1,2 @@
+# Zero runtime dependencies. Standard library only.
+# Add your provider SDKs here when you wire real models.
