@@ -1,6 +1,6 @@
-<p align="center"><img src="cover.svg" alt="Quorum" width="100%"></p>
+<p align="center"><img src="cover.svg" alt="AI Quorum" width="100%"></p>
 
-<h1 align="center">Quorum</h1>
+<h1 align="center">AI Quorum</h1>
 <p align="center"><b>One prompt. Every model. Real agreement, measured.</b></p>
 <p align="center">Ask them all &nbsp;·&nbsp; score the consensus &nbsp;·&nbsp; zero dependencies</p>
 
@@ -60,7 +60,7 @@ A provider that rate-limits, times out, or returns nothing is recorded as such a
 ## Try it now
 
 ```bash
-git clone https://github.com/Yacineutt/Quorum && cd Quorum
+git clone https://github.com/Yacineutt/AI-Quorum && cd AI-Quorum
 python3 examples/mock_providers.py
 ```
 
@@ -72,7 +72,7 @@ Token overlap is the default because it is language-agnostic and has no dependen
 
 ## Related
 
-**[AgentGuard](https://github.com/Yacineutt/AgentGuard)** — the operational doctrines behind this design. Quorum is doctrine 3 (*honesty over fluency*) made executable.
+**[AI AgentGuard](https://github.com/Yacineutt/AI-AgentGuard)** — the operational doctrines behind this design. Quorum is doctrine 3 (*honesty over fluency*) made executable.
 
 ## License
 

@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
 <defs>
-  <radialGradient id="amb" cx="0.24" cy="0.48" r="0.72"><stop offset="0" stop-color="#0d2a44"/><stop offset="0.42" stop-color="#08122a"/><stop offset="1" stop-color="#030409"/></radialGradient>
+  <radialGradient id="amb" cx="0.24" cy="0.46" r="0.72"><stop offset="0" stop-color="#0d2a44"/><stop offset="0.42" stop-color="#08122a"/><stop offset="1" stop-color="#030409"/></radialGradient>
   <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.55" stop-color="#38BDF8"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient>
   <linearGradient id="txtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#EAF6FF"/><stop offset="1" stop-color="#7DD3FC"/></linearGradient>
   <filter id="bL" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
   <filter id="bM" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
   <filter id="bS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
-  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#38BDF8" stroke-opacity="0.055" stroke-width="1"/></pattern>
+  <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#38BDF8" stroke-opacity="0.06" stroke-width="1"/></pattern>
 </defs>
 <rect width="1280" height="640" fill="url(#amb)"/>
 <rect width="1280" height="640" fill="url(#mesh)"/>
-<ellipse cx="300" cy="330" rx="300" ry="290" fill="#22D3EE" opacity="0.13" filter="url(#bL)"/>
-<ellipse cx="300" cy="330" rx="120" ry="120" fill="#7C5CFF" opacity="0.12" filter="url(#bL)"/>
+<ellipse cx="300" cy="330" rx="300" ry="290" fill="#22D3EE" opacity="0.15" filter="url(#bL)"/>
+<ellipse cx="300" cy="330" rx="118" ry="118" fill="#7C5CFF" opacity="0.11" filter="url(#bL)"/>
 
 <g transform="translate(1132,30) scale(0.6)"><rect x="-6" y="-6" width="132" height="132" rx="26" fill="#0a0a20" opacity="0.55"/>
   <defs>
@@ -97,24 +97,18 @@
 </g>
 <text x="1124" y="115" text-anchor="end" font-family="DejaVu Sans" font-weight="bold" font-size="18" fill="#7DD3FC" letter-spacing="3">WEVIA</text>
 
-<!-- orbit + convergence (left) -->
 <g transform="translate(300,330)">
-  <circle r="185" fill="none" stroke="#38BDF8" stroke-opacity="0.13" stroke-width="1"/>
-  <circle r="142" fill="none" stroke="#7C5CFF" stroke-opacity="0.11" stroke-width="1"/>
+  <circle r="185" fill="none" stroke="#38BDF8" stroke-opacity="0.13" stroke-width="1"/><circle r="142" fill="none" stroke="#7C5CFF" stroke-opacity="0.11" stroke-width="1"/>
   <g fill="none" stroke-linecap="round">
     <path d="M0,-162 L0,-58" stroke="#22D3EE" stroke-width="8" opacity="0.32" filter="url(#bM)"/><path d="M0,-162 L0,-58" stroke="#A5F3FC" stroke-width="2" opacity="0.8"/>
     <path d="M140,-81 L50,-29" stroke="#22D3EE" stroke-width="8" opacity="0.32" filter="url(#bM)"/><path d="M140,-81 L50,-29" stroke="#A5F3FC" stroke-width="2" opacity="0.8"/>
     <path d="M140,81 L50,29" stroke="#34D399" stroke-width="8" opacity="0.3" filter="url(#bM)"/><path d="M140,81 L50,29" stroke="#A7F3D0" stroke-width="2" opacity="0.75"/>
-    <path d="M-140,81 L-50,29" stroke="#7C5CFF" stroke-width="8" opacity="0.3" filter="url(#bM)"/><path d="M-140,81 L-50,29" stroke="#C4B5FD" stroke-width="2" opacity="0.75"/>
-  </g>
-  <g>
-    <g transform="translate(0,-162)"><circle r="20" fill="#22D3EE" opacity="0.42" filter="url(#bM)"/><circle r="14" fill="#071a2b" stroke="#67E8F9" stroke-width="2.2"/><circle r="4" fill="#ECFEFF"/></g>
-    <g transform="translate(140,-81)"><circle r="18" fill="#22D3EE" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#071a2b" stroke="#67E8F9" stroke-width="2"/><circle r="3.6" fill="#ECFEFF"/></g>
-    <g transform="translate(140,81)"><circle r="18" fill="#34D399" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#071a2b" stroke="#6EE7B7" stroke-width="2"/><circle r="3.6" fill="#ECFDF5"/></g>
-    <g transform="translate(-140,81)"><circle r="18" fill="#7C5CFF" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#0d0a24" stroke="#C4B5FD" stroke-width="2"/><circle r="3.6" fill="#F5F3FF"/></g>
-    <g transform="translate(-140,-81)"><circle r="14" fill="#F59E0B" opacity="0.22" filter="url(#bM)"/><circle r="12" fill="#1a1206" stroke="#FCD34D" stroke-width="1.6" stroke-dasharray="3 4" opacity="0.75"/><circle r="3" fill="#FDE68A" opacity="0.8"/></g>
-  </g>
-  <!-- MASCOT as the consensus core -->
+    <path d="M-140,81 L-50,29" stroke="#7C5CFF" stroke-width="8" opacity="0.3" filter="url(#bM)"/><path d="M-140,81 L-50,29" stroke="#C4B5FD" stroke-width="2" opacity="0.75"/></g>
+  <g><g transform="translate(0,-162)"><circle r="20" fill="#22D3EE" opacity="0.42" filter="url(#bM)"/><circle r="14" fill="#071a2b" stroke="#67E8F9" stroke-width="2.2"/><circle r="4" fill="#ECFEFF"/></g>
+  <g transform="translate(140,-81)"><circle r="18" fill="#22D3EE" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#071a2b" stroke="#67E8F9" stroke-width="2"/><circle r="3.6" fill="#ECFEFF"/></g>
+  <g transform="translate(140,81)"><circle r="18" fill="#34D399" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#071a2b" stroke="#6EE7B7" stroke-width="2"/><circle r="3.6" fill="#ECFDF5"/></g>
+  <g transform="translate(-140,81)"><circle r="18" fill="#7C5CFF" opacity="0.38" filter="url(#bM)"/><circle r="13" fill="#0d0a24" stroke="#C4B5FD" stroke-width="2"/><circle r="3.6" fill="#F5F3FF"/></g>
+  <g transform="translate(-140,-81)"><circle r="14" fill="#F59E0B" opacity="0.22" filter="url(#bM)"/><circle r="12" fill="#1a1206" stroke="#FCD34D" stroke-width="1.6" stroke-dasharray="3 4" opacity="0.75"/><circle r="3" fill="#FDE68A" opacity="0.8"/></g></g>
   <g transform="translate(-105,-142) scale(0.7)">
 <defs>
   <linearGradient id="quorum_body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#22A5E0"/></linearGradient>
@@ -168,26 +162,33 @@
 <line x1="150" y1="98" x2="150" y2="76" stroke="#22D3EE" stroke-width="4" stroke-linecap="round"/>
 <circle cx="150" cy="70" r="8" fill="#34D399" filter="url(#quorum_dropg)"/>
 <circle cx="150" cy="70" r="3.5" fill="#ECFDF5"/>
-</g>
+</g></g>
+
+<!-- AI badge -->
+<g transform="translate(602,170)">
+  <rect x="0" y="-26" width="74" height="36" rx="18" fill="url(#neon)" opacity="0.22" filter="url(#bS)"/>
+  <rect x="0" y="-26" width="74" height="36" rx="18" fill="none" stroke="url(#neon)" stroke-width="2"/>
+  <text x="37" y="0" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="22" fill="#7DD3FC" letter-spacing="3">AI</text>
+  <rect x="88" y="-11" width="52" height="2.5" rx="1.2" fill="url(#neon)" opacity="0.55"/>
 </g>
 
 <g font-family="DejaVu Sans" font-weight="bold">
-  <text x="600" y="256" font-size="96" fill="#22D3EE" opacity="0.55" filter="url(#bL)">Quorum</text>
-  <text x="600" y="256" font-size="96" fill="#38BDF8" opacity="0.45" filter="url(#bS)">Quorum</text>
-  <text x="600" y="256" font-size="96" fill="url(#txtg)">Quorum</text>
+  <text x="600" y="278" font-size="94" fill="#22D3EE" opacity="0.6" filter="url(#bL)">Quorum</text>
+  <text x="600" y="278" font-size="94" fill="#22D3EE" opacity="0.5" filter="url(#bS)">Quorum</text>
+  <text x="600" y="278" font-size="94" fill="url(#txtg)">Quorum</text>
 </g>
-<rect x="602" y="286" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
-<rect x="602" y="286" width="140" height="5" rx="2.5" fill="url(#neon)"/>
+<rect x="602" y="306" width="140" height="5" rx="2.5" fill="url(#neon)" opacity="0.8" filter="url(#bS)"/>
+<rect x="602" y="306" width="140" height="5" rx="2.5" fill="url(#neon)"/>
 <g font-family="DejaVu Sans">
-  <text x="602" y="344" font-size="27" fill="#CFE9FF">One prompt. Every model.</text>
-  <text x="602" y="380" font-size="27" fill="#CFE9FF">Real agreement, measured.</text>
-  <text x="602" y="436" font-size="18" fill="#7E9CC0">Ask them all &#183; score the consensus &#183; zero deps</text>
+  <text x="602" y="362" font-size="27" fill="#CFE9FF">One prompt. Every model.</text>
+  <text x="602" y="398" font-size="27" fill="#CFE9FF">Real agreement, measured.</text>
+  <text x="602" y="452" font-size="18" fill="#7E9CC0">Ask them all &#183; score the consensus &#183; zero deps</text>
 </g>
-<g transform="translate(602,474)">
-  <circle cx="10" cy="-5" r="10" fill="#38BDF8"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<g transform="translate(602,490)">
+  <circle cx="10" cy="-5" r="10" fill="#22D3EE"/><path d="M4,-6 L9,-1 L17,-12" fill="none" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
   <text x="30" y="0" font-family="DejaVu Sans" font-weight="bold" font-size="17" fill="#7DD3FC">Pip</text>
-  <text x="66" y="0" font-family="DejaVu Sans" font-size="14" fill="#6785A8">— tallies what the models think</text>
+  <text x="66" y="0" font-family="DejaVu Sans" font-size="14" fill="#7E9CC0">&#8212; tallies what the models think</text>
 </g>
-<g font-family="DejaVu Sans"><rect x="602" y="506" width="3" height="19" rx="1.5" fill="#22D3EE"/><text x="618" y="521" font-size="15" fill="#7189AE">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
-<rect x="1" y="1" width="1278" height="638" fill="none" stroke="#22D3EE" stroke-opacity="0.16" stroke-width="2"/>
+<g font-family="DejaVu Sans"><rect x="602" y="520" width="3" height="19" rx="1.5" fill="#22D3EE"/><text x="618" y="535" font-size="15" fill="#7E9CC0">by Yacine Mahboub &#183; Founder of WEVIA</text></g>
+<rect x="1" y="1" width="1278" height="638" fill="none" stroke="#22D3EE" stroke-opacity="0.18" stroke-width="2"/>
 </svg>
